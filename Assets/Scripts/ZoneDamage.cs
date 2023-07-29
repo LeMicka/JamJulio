@@ -14,6 +14,7 @@ public class ZoneDamage : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("enemy"))
         {
+            GameManager.instance.kills += 1;
             GameManager.instance.enemies.Remove(other.transform);
             Destroy(other.gameObject);
         }

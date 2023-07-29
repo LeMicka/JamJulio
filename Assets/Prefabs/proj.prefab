@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5551764771146141672}
   - component: {fileID: 5551764771146141675}
   - component: {fileID: 468947958971485620}
+  - component: {fileID: 434314240927648918}
+  - component: {fileID: 84095599824143961}
   m_Layer: 0
   m_Name: proj
   m_TagString: Untagged
@@ -93,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5551764771146141674}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -113,4 +115,31 @@ MonoBehaviour:
   player: {fileID: 0}
   maxDistanceToCheck: 10
   speed: 100
-  tarjet: {fileID: 0}
+--- !u!114 &434314240927648918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551764771146141674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fba3f4493a58b43a52fb5f1eb218ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &84095599824143961
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551764771146141674}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

@@ -23,12 +23,11 @@ public class GameManager : MonoBehaviour
         for ( int i = 1 ; i < candidates.Length ; ++i )
         {
             enemies.Add(candidates[i].transform);
-        }
+        }   
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

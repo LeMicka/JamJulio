@@ -10,23 +10,25 @@ public class projMovement : MonoBehaviour
 
     public float speed = 100;
     //public Transform tarjet;
+    Transform tarjet;
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        tarjet = GetCloserEnemy();
+        Destroy(this.gameObject, 2f);
     }
 
     // Update is called once per frame
     void Update()
-    {
-
-        Transform tarjet = GetCloserEnemy();
-        
-        if(Vector3.Distance(transform.position, tarjet.position) > 0.2f)
+    {   
+        if(tarjet != null)
         {
-            transform.LookAt(tarjet);
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        }
-            
+            if(Vector3.Distance(transform.position, tarjet.position) > 0.2f)
+            {
+                transform.LookAt(tarjet);
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
+        }     
     }
     public Transform GetCloserEnemy()
     {
@@ -55,4 +57,5 @@ public class projMovement : MonoBehaviour
 
         return closestEnemy;
     }
+
 }
